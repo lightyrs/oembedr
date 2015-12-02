@@ -64,7 +64,7 @@ module Oembedr
       #   When calling Oembedr#fetch set the `nowrap` parameter to avoid
       #   noembed.com wrapper
       #   Example: { :params => {:nowrap => 'on'} }
-      /(thedailyshow\.com|funnyordie\.com|ted\.com|livejournal\.com|github\.com|metacafe\.com|wikipedia\.org|xkcd\.com|imdb\.com)/ => 'http://noembed.com/embed'
+      /(xkcd\.com|soundcloud\.com|flickr\.com|flic\.kr|ted\.com|theverge\.com|viddler\.com|avclub\.com|wired\.com|theonion\.com|yfrog\.com|duffelblog\.com|clickhole\.com|skitch\.com|skit\.ch|app\.net|gist\.github\.com|dropbox\.com|db\.tt|wikipedia\.org|traileraddict\.com|lockerz\.com|gifuk\.com|trailers\.apple\.com|gfycat\.com|bash\.org|arstechnica\.com|imgur\.com|asciiartfarts\.com|monoprice\.com|boingboing\.net|github\.com|git\.io|spotify\.com|path\.com|funnyordie\.com|twitpic\.com|giantbomb\.com|beeradvocate\.com|imdb\.com|cl\.ly|clyp\.it|hulu\.com|amazon\.com|amzn\.com|qik\.com|slideshare\.net|imgur\.com|instagr\.am|instagram\.com|twitlonger\.com|tl\.gd|vine\.co|urbandictionary\.com|picplz\.com)/ => 'http://noembed.com/embed'
     }
 
     # Locate the correct service endpoint for the given resource URL.
