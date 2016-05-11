@@ -30,6 +30,13 @@ module Oembedr
       /open\.spotify\.com/ => 'https://embed.spotify.com/oembed/',
       /(rdio\.com|rd\.io)/ => 'http://www.rdio.com/api/oembed/',
 
+      # NoEmbed
+      # NOTE:
+      #   When calling Oembedr#fetch set the `nowrap` parameter to avoid
+      #   noembed.com wrapper
+      #   Example: { :params => {:nowrap => 'on'} }
+      /(xkcd\.com|soundcloud\.com|flickr\.com|flic\.kr|ted\.com|theverge\.com|viddler\.com|avclub\.com|wired\.com|theonion\.com|yfrog\.com|duffelblog\.com|clickhole\.com|skitch\.com|skit\.ch|app\.net|gist\.github\.com|dropbox\.com|db\.tt|wikipedia\.org|traileraddict\.com|lockerz\.com|gifuk\.com|trailers\.apple\.com|gfycat\.com|bash\.org|arstechnica\.com|imgur\.com|asciiartfarts\.com|monoprice\.com|boingboing\.net|github\.com|git\.io|spotify\.com|path\.com|funnyordie\.com|twitpic\.com|giantbomb\.com|beeradvocate\.com|imdb\.com|cl\.ly|clyp\.it|hulu\.com|amazon\.com|amzn\.com|qik\.com|slideshare\.net|imgur\.com|instagr\.am|instagram\.com|twitlonger\.com|tl\.gd|vine\.co|urbandictionary\.com|picplz\.com)/ => 'http://noembed.com/embed',
+
       # Image
       /(deviantart\.com|fav\.me)/ => 'http://backend.deviantart.com/oembed',
       /(flic\.kr|flickr)/ => "http://www.flickr.com/services/oembed/",
@@ -57,14 +64,7 @@ module Oembedr
       #   When calling Oembedr#fetch set the `for` parameter with your ID
       #   Example: { :params => {:for => 'oembedr.com'} }
       /(wordpress\.com|blogs\.cnn\.com|techcrunch\.com|wp\.me)/ =>
-        'http://public-api.wordpress.com/oembed/1.0/',
-
-      # NoEmbed
-      # NOTE:
-      #   When calling Oembedr#fetch set the `nowrap` parameter to avoid
-      #   noembed.com wrapper
-      #   Example: { :params => {:nowrap => 'on'} }
-      /(xkcd\.com|soundcloud\.com|flickr\.com|flic\.kr|ted\.com|theverge\.com|viddler\.com|avclub\.com|wired\.com|theonion\.com|yfrog\.com|duffelblog\.com|clickhole\.com|skitch\.com|skit\.ch|app\.net|gist\.github\.com|dropbox\.com|db\.tt|wikipedia\.org|traileraddict\.com|lockerz\.com|gifuk\.com|trailers\.apple\.com|gfycat\.com|bash\.org|arstechnica\.com|imgur\.com|asciiartfarts\.com|monoprice\.com|boingboing\.net|github\.com|git\.io|spotify\.com|path\.com|funnyordie\.com|twitpic\.com|giantbomb\.com|beeradvocate\.com|imdb\.com|cl\.ly|clyp\.it|hulu\.com|amazon\.com|amzn\.com|qik\.com|slideshare\.net|imgur\.com|instagr\.am|instagram\.com|twitlonger\.com|tl\.gd|vine\.co|urbandictionary\.com|picplz\.com)/ => 'http://noembed.com/embed'
+        'http://public-api.wordpress.com/oembed/1.0/'
     }
 
     # Locate the correct service endpoint for the given resource URL.
